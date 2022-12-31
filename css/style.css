@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root {
+    --color-title: #3a6cf4;
+    --color-2: #fff;
+    --padding: 80px;
+
+}
+/* Start Framework */
+.abdo-ali {
+    margin: 0 auto 80px;
+    border: 2px solid black;
+    width: fit-content;
+    padding: 10px 20px;
+    font-size: 30px;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s;
+}
+.abdo-ali:hover {
+    color: white;
+    border: 2px solid white;
+    transition-delay: 1s;
+}
+.abdo-ali::before,
+.abdo-ali::after {
+    content: "";
+    background-color: #2196f3;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.abdo-ali::before {
+    content: "";
+    left: -35px;
+}
+.abdo-ali::after {
+    content: "";
+    right: -35px;
+}
+.abdo-ali:hover::before {
+    z-index: -1;
+    animation: abdo 1s linear forwards;
+}
+.abdo-ali:hover::after {
+    z-index: -1;
+    animation: ali 1s linear forwards;
+}
+@keyframes abdo {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+@keyframes ali {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+/* End Framework */
+
+/* Start Header */
+.header {
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+.header .logo {
+    text-decoration: none;
+    color: var(--color-title);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+.header .navigation a {
+    color: var(--color-title);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-left: 30px;
+}
+.header .navigation a:hover {
+    color: #601cfc;
+}
+/* End Header */
+
+/* Start Landing */
+.landing {
+    padding: 100px 200px;
+    width: 100%;
+    min-height: 100vh;
+    background: url(../image/aaa.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.landing h2 {
+    color: var(--color-2);
+    font-size: 1.4em;
+    font-weight: 500;
+}
+.landing h2 span {
+    display: inline-block;
+    color: #4e9eff;
+    font-size: 3em;
+    font-weight: 600;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+.landing h3 {
+    color: var(--color-2);
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.landing .main-btn {
+    display: inline-block;
+    background-color: #3a6cf4;
+    color: var(--color-2);
+    padding: 0.9375em 2.1875em;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    transition: 0.7s;
+}
+.landing .main-btn:hover {
+    transform: scale(1.1);
+    background-color: #0a49f6;
+}
+.landing .social-icons a {
+    color: var(--color-2);
+    font-size: 1.7em;
+    margin-right: 30px;
+}
+/* End Landing */
+
+/* Start services */
+.services {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+.title {
+    display: flex;
+    justify-content: center;
+    color: var(--color-title);
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.services .content .box {
+    background-color: var(--color-2);
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 15%);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    transition: 0.7s;
+}
+.services .content .box:hover {
+    transform: scale(1.1);
+}
+.services .content .box .icon {
+    font-size: 8em;
+    font-weight: bold;
+    color: var(--color-title);
+    text-align: center;
+}
+.services .content .box .infe h4 {
+    color: var(--color-title);
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.services .content .box .infe p {
+    display: flex;
+    justify-content: center;
+}
+/* End services */
+
+/* Start project*/
+.project {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    background-color: #000016;
+}
+.project .content {
+    margin-top: 30px;
+}
+.project .content .boxing {
+    background-color: var(--color-2);
+    border: 1px solid var(--color-2);
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+.project .content .boxing:hover {
+    transform: scale(1.1);
+}
+.project .content .boxing .image:hover {
+    opacity: 0.9;
+}
+.project .content .boxing .image img {
+    width: 100%;
+    height: 100%;
+}
+.project .content .boxing .infoo {
+    padding: 1em;
+}
+.project .content .boxing .infoo .p-one {
+        font-size: 0.8em;
+        color: #000;
+}
+.project .content .boxing .infoo strong {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.project .content .boxing .infoo strong .more-details {
+    text-decoration: none;
+    color: var(--color-title);
+}
+.project .content .boxing .infoo strong .more-details:hover {
+    color: #601cfc;
+}
+/* End project*/
+
+/* Start pricing */
+.pricing {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+.pricing .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.pricing .content .box {
+    margin: 20px 10px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 15%);
+    width: 315px;
+    padding: 15px 25px;
+    transition: 0.7s ease;
+}
+.pricing .content .box:hover {
+    transform: scale(1.1);
+}
+.pricing .content .box .icm{
+    font-size: 4.5em;
+    font-weight: 500;
+    text-align: center;
+    color: var(--color-title);
+    margin: 15px auto;
+}
+.pricing .content .box .text {
+    text-align: center;
+}
+.pricing .content .box .text h3 {
+    color: #000;
+}
+.pricing .content .box .text p {
+    font-size: 1.5em;
+}
+/* End pricing */
+
+/* Start footer */
+.footer {
+    background-color: #000016;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.footer .footer-title span {
+    color: var(--color-title);
+}
+.footer .social-icons a {
+    font-size: 1.3em;
+}
+/* End footer */
+@media (max-width: 1023px) {
+    .header .navigation a {
+        padding-left: 10px;
+    }
+    .services .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .pricing .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/* button اللي بيطلع لفوق عند الضغط */
+
+button {
+    background-color: var(--color-title);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    font-weight: bold;
+    display: none;
+}
